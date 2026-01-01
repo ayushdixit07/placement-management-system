@@ -5,7 +5,7 @@ import TPODashboard from "./pages/tpo/TPODashboard";
 import CompanyDashboard from "./pages/company/CompanyDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
       <Routes>
@@ -14,7 +14,7 @@ function App() {
         <Route
           path="/student"
           element={
-            <ProtectedRoute allowedRole="student">
+            <ProtectedRoute allowedRole="Student">
               <StudentDashboard />
             </ProtectedRoute>
           }
@@ -23,7 +23,7 @@ function App() {
         <Route
           path="/tpo"
           element={
-            <ProtectedRoute allowedRole="tpo">
+            <ProtectedRoute allowedRole="TPO">
               <TPODashboard />
             </ProtectedRoute>
           }
@@ -32,7 +32,7 @@ function App() {
         <Route
           path="/company"
           element={
-            <ProtectedRoute allowedRole="company">
+            <ProtectedRoute allowedRole="Company">
               <CompanyDashboard />
             </ProtectedRoute>
           }
@@ -41,6 +41,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;
-

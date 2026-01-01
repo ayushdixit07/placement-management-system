@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function Navbar() {
   const { logout, role } = useAuth();
   const navigate = useNavigate();
-  if (!role) return null;
+  
 
 
   const handleLogout = () => {
