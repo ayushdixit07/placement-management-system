@@ -4,15 +4,13 @@ const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [role, setRole] = useState(
-    localStorage.getItem("role")
+    () => localStorage.getItem("role") || null
   );
 
- const login = (userRole) => {
-  const normalizedRole = userRole.toLowerCase();
-  setRole(normalizedRole);
-  localStorage.setItem("role", normalizedRole);
-};
-
+  const login = (selectedRole) => {
+    setRole(selectedRole);
+    localStorage.setItem("role", selectedRole);
+  };
 
   const logout = () => {
     setRole(null);
@@ -26,5 +24,6 @@ export function AuthProvider({ children }) {
   );
 }
 
-export const useAuth = () => useContext(AuthContext);
-
+export function useAuth() {
+  return useContext(AuthContext);
+}
