@@ -29,6 +29,7 @@ export default function StudentDashboard() {
 
  return (
   <div className="min-h-screen bg-gray-100 p-6">
+    <div className="max-w-6xl mx-auto">
     <h2 className="text-2xl font-bold mb-6 text-gray-800">
       Available Companies
     </h2>
@@ -82,6 +83,7 @@ export default function StudentDashboard() {
     </ul>
   )}
 </div>
+  </div>
   </div>
 );
 

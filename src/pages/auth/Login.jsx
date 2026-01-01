@@ -12,7 +12,9 @@ export default function Login() {
 
   
    return (
-  <div className="min-h-screen flex items-center justify-center bg-gray-100">
+ <div className="min-h-screen flex items-center justify-center 
+bg-gradient-to-br from-blue-50 via-white to-gray-100">
+
     <div className="bg-white p-8 rounded-xl shadow-lg w-96 text-center">
 
       <h1 className="text-4xl font-bold text-blue-700 mb-2">
@@ -27,21 +29,22 @@ export default function Login() {
         onClick={() => handleLogin("Student")}
         className="w-full bg-blue-600 text-white py-2 rounded mb-3 hover:bg-blue-700"
       >
-        Student Login
+        🎓 Student Login
+
       </button>
 
       <button
         onClick={() => handleLogin("TPO")}
         className="w-full bg-blue-600 text-white py-2 rounded mb-3 hover:bg-blue-700"
       >
-        TPO Login
+        🧑‍💼 TPO Login
       </button>
 
       <button
         onClick={() => handleLogin("Company")}
         className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
       >
-        Company Login
+        🏢 Company Login
       </button>
 
     </div>

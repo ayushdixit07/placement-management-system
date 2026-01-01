@@ -108,14 +108,15 @@ export default function TPODashboard() {
            {openCompanyId === company.id && (
   <div className="mt-3 bg-gray-50 p-3 rounded-lg">
     {applications[company.id]?.length > 0 ? (
-     <ul className="mt-2 ml-4 list-disc text-sm text-gray-700">
-  {applications[company.id].map((student, index) => (
-    <li key={index}>
-      {student.name} ({student.branch}) – {student.roll}
-    </li>
-  ))}
-</ul>
+      <ul className="list-disc list-inside text-sm text-gray-700">
+        {applications[company.id].map((student, index) => (
+         <li key={index}>
+  <span className="font-medium">{student.name}</span>{" "}
+  ({student.branch}) – {student.roll}
+</li>
 
+        ))}
+      </ul>
     ) : (
       <p className="text-sm text-gray-500">No applications yet</p>
     )}
