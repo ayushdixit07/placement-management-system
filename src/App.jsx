@@ -13,32 +13,32 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Login />} />
 
-          <Route
-            path="/student"
-            element={
-              <ProtectedRoute role="Student">
-                <StudentDashboard />
-              </ProtectedRoute>
-            }
-          />
+         <Route
+  path="/student"
+  element={
+    <ProtectedRoute allowedRole="Student">
+      <StudentDashboard />
+    </ProtectedRoute>
+  }
+/>
 
-          <Route
-            path="/tpo"
-            element={
-              <ProtectedRoute role="TPO">
-                <TPODashboard />
-              </ProtectedRoute>
-            }
-          />
+         <Route
+  path="/tpo"
+  element={
+    <ProtectedRoute allowedRole="TPO">
+      <TPODashboard />
+    </ProtectedRoute>
+  }
+/>
 
-          <Route
-            path="/company"
-            element={
-              <ProtectedRoute role="Company">
-                <CompanyDashboard />
-              </ProtectedRoute>
-            }
-          />
+         <Route
+  path="/company"
+  element={
+    <ProtectedRoute allowedRole="Company">
+      <CompanyDashboard />
+    </ProtectedRoute>
+  }
+/>
         </Routes>
       </BrowserRouter>
     </AuthProvider>
