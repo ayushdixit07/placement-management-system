@@ -7,10 +7,12 @@ export function AuthProvider({ children }) {
     localStorage.getItem("role")
   );
 
-  const login = (userRole) => {
-    setRole(userRole);
-    localStorage.setItem("role", userRole);
-  };
+ const login = (userRole) => {
+  const normalizedRole = userRole.toLowerCase();
+  setRole(normalizedRole);
+  localStorage.setItem("role", normalizedRole);
+};
+
 
   const logout = () => {
     setRole(null);
